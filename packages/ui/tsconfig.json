@@ -1,0 +1,10 @@
+{
+  "extends": "@repo/typescript-config/react-library.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "allowArbitraryExtensions": true,
+    "strictNullChecks": true,
+    "types": ["node", "react", "react-dom"]
+  }
+}

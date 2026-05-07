@@ -1,0 +1,70 @@
+{
+  "name": "@acme/ui",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./avator": {
+      "types": "./dist/components/Avator/avator.d.ts",
+      "import": "./dist/components/Avator/avator.mjs",
+      "require": "./dist/components/Avator/avator.js"
+    },
+    "./button": {
+      "types": "./dist/components/Button/button.d.ts",
+      "import": "./dist/components/Button/button.mjs",
+      "require": "./dist/components/Button/button.js"
+    },
+    "./grid": {
+      "types": "./dist/components/Grid/grid.d.ts",
+      "import": "./dist/components/Grid/grid.mjs",
+      "require": "./dist/components/Grid/grid.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "storybook": "storybook dev -p 6007",
+    "build-storybook": "storybook build --docs",
+    "preview-storybook": "serve storybook-static",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf .turbo node_modules dist"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@storybook/builder-vite": "^10.3.6",
+    "@storybook/addon-docs": "^10.3.6",
+    "@storybook/addon-links": "^10.3.6",
+    "@storybook/react": "^10.3.6",
+    "@storybook/react-vite": "^10.3.6",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "esbuild": "^0.28.0",
+    "eslint": "^8.57.0",
+    "@repo/typescript-config": "workspace:*",
+    "glob": "^10.3.10",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "serve": "^14.2.1",
+    "storybook": "^10.3.6",
+    "tsup": "^8.0.2",
+    "typescript": "5.5.4",
+    "vite": "^8.0.10"
+  },
+  "dependencies": {
+    "@durgesh/dt-tokens-tailwind": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
